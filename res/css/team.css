@@ -1,0 +1,165 @@
+@font-face {
+  font-family: roboto-regular;
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+* {
+  font-family: roboto-regular;
+  margin: 0;
+  padding: 0;
+}
+
+.landing-heading {
+  margin: 4rem 0 0 1rem;
+}
+
+nav.year-nav {
+  padding: 1rem 0;
+  margin: 0.25rem auto;
+  justify-content: center;
+}
+.year-nav.nav-pills .nav-link.active {
+  background-color: var(--red);
+  border-radius: 0;
+}
+
+.year-nav.nav-pills .nav-link:hover {
+  cursor: pointer;
+  border-radius: 0;
+  transform: scale(1.25);
+}
+
+.current-team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 75vw;
+  margin: 0 auto;
+  justify-items: center;
+  text-transform: capitalize;
+}
+
+.current-team div {
+  /* margin: 0 auto; */
+  margin: 0 0 0.5rem;
+}
+
+.current-team .name {
+  color: var(--red);
+  margin: 0;
+  padding: 0;
+  text-transform: initial;
+}
+
+.current-team .position {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  padding-right: 2rem;
+  width: 10rem;
+  text-overflow: clip;
+}
+
+.current-team img {
+  display: inline-block;
+  object-fit: cover;
+  width: 12rem;
+  height: 20rem;
+  margin: auto;
+  padding: 0px;
+}
+.team-title {
+  margin-top: 6rem !important;
+  margin-left: 3rem !important;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 512px) {
+  .landing-heading {
+    margin: 4.6rem 0 0 0;
+  }
+  .year-nav .nav-link {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+  }
+  .current-team {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    /* width: 100%; */
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .current-team div {
+    margin: 0 auto;
+    /* margin: 0; */
+    /* max-width: 50%; */
+  }
+
+  .current-team img {
+    display: inline-block;
+    object-fit: cover;
+    width: 8rem;
+    height: 12rem;
+    margin: auto;
+    padding: 0px;
+  }
+  .all-div {
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 75vw; */
+  }
+
+  .all-years {
+    object-fit: cover;
+    width: 6rem;
+    /* max-width: 100%; */
+    height: 10rem;
+    border: solid rgba(0, 0, 0, 0.4) 2px;
+    margin: 0.5rem auto;
+  }
+  .current-team .position {
+    margin: 0 0 0.5rem;
+    font-size: 0.65rem;
+    padding: 0;
+    text-overflow: clip;
+    width: 8rem;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .current-team {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+    padding: 0rem;
+    max-width: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin: 0;
+  }
+  .current-team img {
+    display: inline-block;
+    object-fit: cover;
+    width: 7rem;
+    height: 10rem;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  .current-team div {
+    margin: 0 auto;
+    width: min-content;
+  }
+  .current-team .name {
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+  .current-team .position {
+    margin: 0 0 0.5rem;
+    font-size: 0.5rem;
+    padding: 0;
+    text-overflow: clip;
+    width: 4rem;
+    max-width: 100%;
+  }
+}

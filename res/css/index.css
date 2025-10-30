@@ -1,0 +1,213 @@
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  margin: 0 auto;
+  height: max-content;
+}
+.carousel-item img {
+  height: 100vh;
+  width: 100vw;
+  object-position: 50% 160%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.bnr-icon {
+  color: #ff5e00;
+  font-size: 3.5rem;
+  position: absolute;
+  border-radius: 50%;
+  height: 25%;
+}
+
+.news-feed-container {
+  overflow-y: hidden;
+  margin: 8px 4rem;
+}
+.jumbotron {
+  margin: 0;
+  margin-bottom: 35px;
+  background-color: var(--white);
+  padding: 0;
+  color: var(--black);
+  font-size: 15px;
+}
+.col-lg-6 p {
+  margin: 0;
+  font-size: 16px;
+}
+.col-lg-6 img {
+  width: 100%;
+  height: 100%;
+}
+.col-lg-6 h4 {
+  margin: 32px 0;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.jumbotron .news-option button {
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid var(--black);
+}
+.img-gradient::after {
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 1)
+  );
+}
+.about-us-container {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../img/cars/CR_X.jpg);
+  background-size: cover;
+  display: flex;
+  height: 90vh;
+  text-align: center;
+  align-items: center;
+  color: var(--white);
+  padding: 8rem;
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.left-container {
+  text-align: start;
+  width: 50%;
+}
+
+.right-container {
+  /* max-width: 20px; */
+  text-align: center;
+  position: relative;
+  width: 50%;
+}
+
+.right-container img {
+  width: 75%;
+  max-width: 95%;
+  width: 470px;
+  height: 400px;
+  object-position: 10% 50%;
+  object-fit: cover;
+}
+
+.about-us-container .left-container h2.camber-heading span {
+  color: var(--red);
+}
+
+h2.social-media {
+  padding: 0 4rem;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--black);
+  margin: 30px auto;
+}
+
+h2.social-media span {
+  color: var(--red);
+}
+.news-option {
+  padding: 0;
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+  .carousel-inner img {
+    height: 50vh;
+    width: 100vw;
+    object-position: bottom;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .left-container {
+    text-align: start;
+    padding: 0rem;
+    margin: 0;
+    /* width: 50%; */
+  }
+
+  .right-container {
+    /* max-width: 20px; */
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .right-container img {
+    width: 100%;
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel-inner img {
+    height: 30vh;
+    width: 100vw;
+    object-position: bottom;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: inline;
+    top: 48%;
+    margin-left: 10%;
+  }
+  .bnr-icon {
+    font-size: 1.5rem;
+  }
+  .news-feed-container {
+    width: 100%;
+    margin: 8px auto;
+  }
+  h2.camber-title {
+    margin: 16px auto;
+  }
+  .col-lg-6 p {
+    margin: 8px 0;
+  }
+  .col-lg-6 h4 {
+    margin: 24px 0;
+    font-size: 24px;
+  }
+  .news-option {
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-us-container {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+    width: 100%;
+  }
+  .left-container {
+    text-align: start;
+    width: 100%;
+  }
+
+  .right-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .right-container img {
+    width: 100%;
+  }
+}

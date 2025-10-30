@@ -1,0 +1,459 @@
+@font-face {
+  font-family: roboto-regular;
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: air-mitalic;
+  src: url(../fonts/air_mitalic.ttf) format("truetype");
+}
+* {
+  font-family: roboto-regular;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+
+.ml-mr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.go-to-top {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--red);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  z-index: 100;
+  text-align: center;
+  color: var(--black);
+  opacity: 0.9;
+  border-radius: 0.25rem;
+}
+.go-to-top:hover {
+  opacity: 1;
+  color: var(--white);
+}
+
+i.fas.fa-arrow-up {
+  margin-top: 1rem;
+}
+
+nav.navbar {
+  position: fixed;
+  width: 100%;
+  height: 55px;
+  background-color: var(--black);
+  z-index: 5;
+}
+
+.nav-link span {
+  font-family: air-mitalic !important;
+}
+
+.navbar-brand {
+  position: fixed;
+  display: inline;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  margin: 0;
+  padding: 8px;
+  width: 136px;
+  height: 80px;
+  clip-path: polygon(0 0, 100% 0, 80% 70%, 0 70%);
+}
+
+.navbar-brand img {
+  width: 104px;
+  height: auto;
+}
+.navbar-sponsor {
+  position: fixed;
+  display: inline;
+  top: -6px;
+  left: 136px;
+  background-color: transparent;
+  margin-top: 0;
+  height: 70px;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link span {
+  position: relative;
+  padding: 0.75rem 0.25rem;
+  z-index: 2;
+
+  color: var(--white);
+}
+
+.nav-link.header-link:hover {
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  background-color: var(--red);
+}
+
+.dropdown-carlist.show {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown:hover {
+  cursor: pointer;
+}
+.dropdown-toggle::after {
+  color: white;
+  margin: auto;
+}
+
+.dropdown-carlist .dropdown-item {
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0;
+  padding: 0.2rem 3rem;
+}
+.dropdown-carlist .dropdown-item:hover {
+  background-color: var(--red);
+  /* padding: 0.3rem 3.3rem; */
+}
+.carousel-indicators {
+  z-index: 1;
+}
+
+h2.camber-title {
+  padding: 0 0;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: start;
+  color: var(--black);
+  margin: 30px auto;
+}
+h2.camber-title span {
+  color: var(--red);
+}
+footer.camber-footer {
+  margin-top: 1rem;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--black);
+  color: #ffffff;
+}
+.col-md-4 {
+  padding: 24px 50px;
+}
+
+footer.camber-footer div h5 {
+  font-family: air-mitalic;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 2px;
+  stroke: var(--black);
+  stroke-width: 3;
+  color: var(--red);
+  margin-top: 2rem;
+}
+footer.camber-footer div img {
+  width: 172px;
+}
+
+.footer-newsletter-button div,
+.footer-send-button div {
+  background-color: var(--red);
+  border: none;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: max-content;
+  padding: 0 2rem;
+}
+.footer-newsletter-button {
+  width: max-content;
+}
+
+footer.camber-footer div h6 {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--white);
+  margin: 0 !important;
+}
+footer.camber-footer div div.social-media-icon {
+  text-align: center;
+  padding: 0px;
+  background-color: var(--black);
+  margin: auto;
+  padding: 1rem 0;
+}
+
+footer.camber-footer div div.social-media-icon a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+footer.camber-footer div div.social-media-icon a i {
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+footer.camber-footer div div.social-media-icon a i:hover {
+  color: var(--red);
+}
+.footer-contact-us {
+  width: 20rem;
+}
+
+footer.camber-footer div div.footer-contact-us .heading {
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--red);
+  margin: 2rem 0 1.4rem 0 !important;
+  text-align: start;
+}
+
+footer.camber-footer div div.footer-contact-us h6 {
+  margin: 0.4rem 0 !important;
+  font-weight: 600;
+}
+
+footer.camber-footer div div.footer-contact-us div p {
+  font-size: 16px;
+  margin-right: 1rem;
+  /* margin-bottom: 2rem; */
+}
+footer.camber-footer div div.footer-contact-us ul li :hover {
+  color: var(--red);
+}
+
+footer.camber-footer div div.footer-contact-us ul li a .fas {
+  font-size: 16px;
+}
+footer.camber-footer div div.footer-button a:hover {
+  text-decoration: none;
+}
+
+.input-section {
+  text-align: center;
+}
+footer.camber-footer div .heading {
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--red);
+  margin: 2rem 0 1.4rem 0 !important;
+  text-align: start;
+}
+.input-section input,
+.input-section textarea {
+  display: block;
+  background-color: var(--grey);
+  border: none;
+  color: orangered;
+  border-radius: 8px;
+  width: 90%;
+}
+.input-section input:focus {
+  outline: none;
+}
+.input-section input::placeholder {
+  color: var(--white);
+}
+
+footer.camber-footer div ul {
+  list-style: none;
+}
+
+footer.camber-footer div ul li {
+  color: white;
+  opacity: 0.8;
+}
+
+footer.camber-footer div ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer.camber-footer div ul li span {
+  font-size: 16px;
+  font-weight: 400;
+}
+footer.camber-footer div ul li span:hover {
+  color: var(--red);
+  border-bottom: 1px dashed var(--red);
+}
+
+footer.camber-footer hr {
+  border-top: 1px solid var(--red);
+}
+
+footer.camber-footer div.hr-below {
+  margin: auto inherit;
+}
+
+footer.camber-footer div.hr-below div.copyright {
+  text-align: start;
+  /* font-size: 80%; */
+  font-weight: 400;
+  padding: 0 !important;
+}
+footer.camber-footer .brand-mark {
+  text-align: right;
+  padding: 0;
+}
+footer.camber-footer small span {
+  font-size: 14px;
+  color: var(--red);
+}
+
+footer.camber-footer small a {
+  text-decoration: none;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .navbar-brand {
+    padding: 0;
+    width: 7rem;
+    height: 5rem;
+  }
+  .navbar-brand img {
+    width: 6rem;
+    height: auto;
+    margin: auto;
+  }
+  .nav-link {
+    padding: 0;
+    margin: 0;
+  }
+  .nav-link span {
+    /* padding: 2px; */
+    margin: 0;
+    /* padding: 0; */
+    font-size: 0.8rem;
+    height: 100%;
+  }
+  .footer-contact-us,
+  .input-section {
+    padding: 24px 8px;
+    width: 90%;
+  }
+  .footer-contact-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer.camber-footer div.footer-contact-us div p {
+    margin-right: 0rem;
+  }
+  .footer-main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    height: 56px;
+    padding: 0;
+  }
+  .navbar-brand {
+    padding: 8px;
+    width: 136px;
+    height: 80px;
+  }
+  .navbar-brand img {
+    width: 104px;
+    height: auto;
+  }
+  .navbar-toggler {
+    z-index: 9;
+    margin: 4px 2px 4px 85%;
+    padding: 4px;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: var(--grey);
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+  ul.navbar-nav {
+    background-color: black;
+  }
+  .navbar .nav-link {
+    /* padding: 4px; */
+    font-size: 0.9rem;
+  }
+
+  .navbar .navbar-nav {
+    background: var(--grey);
+  }
+
+  .navbar .nav-link span {
+    width: 100vw;
+    margin: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar .nav-item:hover {
+    clip-path: none;
+    width: 100vw;
+
+    background-color: var(--red);
+  }
+
+  footer.camber-footer div.content div p {
+    text-align: justify;
+    font-size: 13px;
+  }
+  footer.camber-footer div h6 {
+    font-size: 13px;
+  }
+  .input-section,
+  .footer-contact-us {
+    padding: 24px 4px;
+    width: 80%;
+  }
+
+  .input-section input {
+    width: 94% !important;
+  }
+  footer.camber-footer div div.footer-contact-us div p {
+    margin-right: 0rem;
+  }
+  footer.camber-footer div.hr-below {
+    margin: auto 24px;
+  }
+
+  footer.camber-footer div.hr-below div.copyright {
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  footer.camber-footer .brand-mark {
+    text-align: center !important;
+  }
+
+  .footer-main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+
+:root {
+  --black: #000000;
+  --grey: #1e1e1e;
+  --red: #e9081e;
+  --white: #ffffff;
+}

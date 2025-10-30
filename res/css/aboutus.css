@@ -1,0 +1,104 @@
+@font-face {
+  font-family: roboto-regular;
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+* {
+  font-family: roboto-regular;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+img {
+  width: 100%;
+  max-width: 100vw;
+}
+
+.about-us,
+.formula-student {
+  display: flex;
+  padding: 4rem;
+}
+.formula-student {
+  flex-flow: column;
+}
+.formula-student-img {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  margin-top: 3rem;
+  max-width: 100vw;
+}
+
+.about-us-text,
+.about-us-img {
+  width: 50%;
+  height: max-content;
+  padding: 3rem;
+  margin: auto 0;
+}
+.formula-student-img,
+.formula-student-text {
+  width: 100%;
+}
+.formula-student h4 {
+  align-self: center;
+  max-width: max-content;
+  margin: 0 auto;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.formula-student-img {
+  max-width: 80vw;
+  /* height: 30rem; */
+  max-height: min-content;
+  object-fit: contain;
+  padding: 0rem 3rem;
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-us,
+  .formula-student {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 0rem 0rem;
+  }
+
+  .about-us-text,
+  .formula-student-text,
+  .about-us-img {
+    width: 90vw;
+    padding: 0.5rem;
+    align-self: center;
+    margin: 0.5rem;
+  }
+  .about-us-img img {
+    max-height: 20rem;
+    object-fit: scale-down;
+    object-position: 50% 60%;
+  }
+  canvas {
+    height: max-content;
+    object-fit: contain;
+    padding: 0 0rem 0 0;
+    width: 100%;
+  }
+  .formula-student-img {
+    width: 100vw;
+    padding: 0rem;
+    align-self: center;
+    margin: 0rem;
+    flex-flow: column;
+  }
+}
