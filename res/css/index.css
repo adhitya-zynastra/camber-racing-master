@@ -1,3 +1,4 @@
+/* ===================== Carousel ===================== */
 .carousel-inner {
   position: relative;
   width: 100%;
@@ -6,6 +7,7 @@
   margin: 0 auto;
   height: max-content;
 }
+
 .carousel-item img {
   height: 100vh;
   width: 100vw;
@@ -22,10 +24,12 @@
   height: 25%;
 }
 
+/* ===================== Content Sections ===================== */
 .news-feed-container {
   overflow-y: hidden;
   margin: 8px 4rem;
 }
+
 .jumbotron {
   margin: 0;
   margin-bottom: 35px;
@@ -34,14 +38,17 @@
   color: var(--black);
   font-size: 15px;
 }
+
 .col-lg-6 p {
   margin: 0;
   font-size: 16px;
 }
+
 .col-lg-6 img {
   width: 100%;
   height: 100%;
 }
+
 .col-lg-6 h4 {
   margin: 32px 0;
   font-weight: 600;
@@ -53,6 +60,7 @@
   font-size: 15px;
   border: 1px solid var(--black);
 }
+
 .img-gradient::after {
   background: linear-gradient(
     to right bottom,
@@ -60,6 +68,8 @@
     rgba(0, 0, 0, 1)
   );
 }
+
+/* ===================== About Section ===================== */
 .about-us-container {
   background-image: linear-gradient(
       to top,
@@ -69,16 +79,11 @@
     url(../img/cars/CR_X.jpg);
   background-size: cover;
   display: flex;
-  height: 90vh;
   text-align: center;
   align-items: center;
   color: var(--white);
   padding: 8rem;
-
-  /* Full height */
   height: 100%;
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,7 +96,6 @@
 }
 
 .right-container {
-  /* max-width: 20px; */
   text-align: center;
   position: relative;
   width: 50%;
@@ -100,7 +104,6 @@
 .right-container img {
   width: 75%;
   max-width: 95%;
-  width: 470px;
   height: 400px;
   object-position: 10% 50%;
   object-fit: cover;
@@ -122,10 +125,12 @@ h2.social-media {
 h2.social-media span {
   color: var(--red);
 }
+
 .news-option {
   padding: 0;
 }
 
+/* ===================== Responsive Design ===================== */
 @media only screen and (max-width: 1366px) and (min-width: 1024px) {
   .carousel-inner img {
     height: 50vh;
@@ -133,19 +138,6 @@ h2.social-media span {
     object-position: bottom;
     object-fit: cover;
     margin: 0 auto;
-  }
-  .left-container {
-    text-align: start;
-    padding: 0rem;
-    margin: 0;
-    /* width: 50%; */
-  }
-
-  .right-container {
-    /* max-width: 20px; */
-    text-align: center;
-    position: relative;
-    width: 100%;
   }
 
   .right-container img {
@@ -162,29 +154,36 @@ h2.social-media span {
     object-fit: cover;
     margin: 0 auto;
   }
+
   .carousel-control-next,
   .carousel-control-prev {
     display: inline;
     top: 48%;
     margin-left: 10%;
   }
+
   .bnr-icon {
     font-size: 1.5rem;
   }
+
   .news-feed-container {
     width: 100%;
     margin: 8px auto;
   }
+
   h2.camber-title {
     margin: 16px auto;
   }
+
   .col-lg-6 p {
     margin: 8px 0;
   }
+
   .col-lg-6 h4 {
     margin: 24px 0;
     font-size: 24px;
   }
+
   .news-option {
     margin: 0;
     padding: 0;
@@ -196,6 +195,7 @@ h2.social-media span {
     padding: 1rem;
     width: 100%;
   }
+
   .left-container {
     text-align: start;
     width: 100%;
@@ -210,4 +210,75 @@ h2.social-media span {
   .right-container img {
     width: 100%;
   }
+}
+
+/* ===================== Navbar & Underline Animation ===================== */
+.navbar-nav .nav-item .nav-link,
+.navbar-nav .nav-item .dropdown-toggle {
+  position: relative;
+  display: inline-block;
+  color: inherit !important;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Use ::before instead of ::after (Bootstrap arrow fix) */
+.navbar-nav .nav-item .nav-link::before,
+.navbar-nav .nav-item .dropdown-toggle::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 60%;
+  height: 2px;
+  background-color: red;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animate underline on hover, focus, or active */
+.navbar-nav .nav-item .nav-link:hover::before,
+.navbar-nav .nav-item .nav-link:focus::before,
+.navbar-nav .nav-item .dropdown-toggle:hover::before,
+.navbar-nav .nav-item .dropdown-toggle:focus::before,
+.navbar-nav .nav-item .nav-link.active::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Remove Bootstrap's default dropdown arrow */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Keep hover and focus clean */
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link.active {
+  background-color: transparent !important;
+  color: inherit !important;
+  outline: none !important;
+}
+
+/* Dropdown menu styling */
+.navbar .dropdown-menu {
+  background-color: #000;
+  border: none;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: #fff;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+  color: #ff5e00;
+}
+
+/* Keep underline visible when dropdown is open */
+.navbar .dropdown.show .dropdown-toggle::before {
+  transform: translateX(-50%) scaleX(1);
 }
