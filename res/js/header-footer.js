@@ -34,7 +34,8 @@ const header = `<nav class="navbar navbar-expand-md navbar-light">
         <li class="nav-item">
           <a class="nav-link header-link" href="partners.html"><span>Partners</span></a>
         </li>
-        <li class="nav-item dropdown show" >
+        <!-- FIXED: removed 'show' so it's not open by default -->
+        <li class="nav-item dropdown">
           <a class="nav-link header-link dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>The Paddock</span></a>
            <div class="dropdown-menu dropdown-carlist" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="cars.html?car=CR800">
@@ -84,27 +85,12 @@ const footer = `
           <a href="https://www.youtube.com/channel/UC_UDIR7rodwCFUY5iEZ8F7A" target="_blank"><i class="fab fa-youtube" ></i></a>
           <a href="#" target="_blank"><i class="fab fa-linkedin" ></i></a>
         </div>
-        ${
-          /*
-        <div class="ml-mr-auto footer-newsletter-button">
-          <div class=" px-2 py-2 ">
-            <a href="#">
-              
-								<h6>Subscribe to our Newsletter! <i class="fas fa-play"></i></h6> 
-							
-              </i>
-            </a>
-          </div>
-        </div>*/ ""
-        }
       </div>
       <div class=></div>
       <div class="footer-contact-us text-left ">
       <div>
         <h6 class="heading pl-3">Address</h6>
         <h6 class="pl-3">Camber Racing</h6>
-
-
         <div class="mb-3 pr-8 pl-3">
           <p>
             Department of Automobile Engineering SRM Institute of Science &
@@ -117,24 +103,16 @@ const footer = `
         <h6 class="pl-3">Athul Jebi</h6>
         <div class="pl-3">
           <ul>
-            <li>
-              <span>Mail: captain.camberracing@gmail.com </span></i></a>
-            </li>
-            <li>
-              <span>Mob: +91 90618 19327</span></i></a>
-            </li>
+            <li><span>Mail: captain.camberracing@gmail.com </span></li>
+            <li><span>Mob: +91 90618 19327</span></li>
           </ul>
       </div>
         </div>
-
-
       </div>
 
       <div class="input-section ">
         <h6 class="heading mb-3  pl-3">GET IN TOUCH</h6>
-
         <form action="https://formspree.io/f/mwkaajzv" method="POST">
-
           <input class="my-3 ml-2 py-1 pl-3" type="text" placeholder="Name" />
           <input class="my-3 ml-2 py-1 pl-3" type="email" placeholder="Email Address" name="_replyto" />
           <input class="my-3 ml-2 py-1 pl-3" type="text" placeholder="Company Name" />
@@ -143,13 +121,10 @@ const footer = `
           <div class=" py-2 align-items-center justify-content-center">
             <button type="submit" style="background-color:transparent; outline:none; border:none">
               <h6>Send</h6>
-              </i>
             </button>
           </div>
         </div>
         </form>
-        
-
       </div>
     </div>
 
@@ -160,13 +135,12 @@ const footer = `
       </div>
       <div class="col-lg-4 col-md-5 col-sm-5 brand-mark">
         <small>Made with <span>&hearts;</span> from
-          <a href= https://srmkzilla.net target=\"_blank\"><span>SRMKZILLA</span></a></small>
+          <a href="https://srmkzilla.net" target="_blank"><span>SRMKZILLA</span></a></small>
       </div>
     </div>
-
   </footer>`;
 
-//const goToTop = `<a class="go-to-top" href="#""><i class="fas fa-arrow-up"></i></a>`;
+// go-to-top button
 const goToTop = document.createElement("a");
 goToTop.classList.add("go-to-top");
 goToTop.href = "#";
@@ -179,17 +153,8 @@ goToTop.appendChild(iconTop);
 const headerEle = document.querySelector("header");
 const footerEle = document.querySelector("footer");
 const body = document.querySelector("body");
+
 window.onload = function () {
-  // const dropdownCarList = document.querySelector(".dropdown-carlist");
-
-  // carMenu.forEach((car) => {
-  //   const carLink = document.createElement("a");
-  //   carLink.classList.add("dropdown-item");
-  //   carLink.href = `cars.html?car=${car}`;
-  //   carLink.innerText = car;
-  //   dropdownCarList.appendChild(carLink);
-  // });
-
   if ($(window).width() >= 768) {
     $(".dropdown").hover(function () {
       $(".dropdown-toggle", this).trigger("click");
@@ -200,3 +165,51 @@ window.onload = function () {
 headerEle.innerHTML = header;
 footerEle.innerHTML = footer;
 body.appendChild(goToTop);
+
+// Navbar glass effect on scroll
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+  if (window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
+
+
+
+
+
+/* ---------------------------
+   Create and insert fade layer
+   --------------------------- */
+(function createNavFade() {
+  // only create once
+  if (!document.querySelector(".nav-fade")) {
+    const fade = document.createElement("div");
+    fade.className = "nav-fade";
+    document.body.appendChild(fade);
+  }
+})();
+
+/* ---------------------------
+   Scroll handler: toggle scrolled class and hide fade
+   --------------------------- */
+const handleNavOnScroll = () => {
+  const navbar = document.querySelector(".navbar");
+  const fade = document.querySelector(".nav-fade");
+  if (!navbar) return;
+
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+    if (fade) fade.classList.add("hidden");
+  } else {
+    navbar.classList.remove("scrolled");
+    if (fade) fade.classList.remove("hidden");
+  }
+};
+
+// run on load and on scroll
+window.addEventListener("scroll", handleNavOnScroll);
+window.addEventListener("load", handleNavOnScroll);
+handleNavOnScroll();
+
+
