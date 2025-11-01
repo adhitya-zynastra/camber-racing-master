@@ -220,11 +220,11 @@ h2.social-media span {
   color: inherit !important;
   text-decoration: none;
   overflow: hidden;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   padding: 0.5rem 0.75rem;
 }
 
-/* Use ::before instead of ::after (Bootstrap arrow fix) */
+/* Underline effect */
 .navbar-nav .nav-item .nav-link::before,
 .navbar-nav .nav-item .dropdown-toggle::before {
   content: "";
@@ -239,7 +239,6 @@ h2.social-media span {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Animate underline on hover, focus, or active */
 .navbar-nav .nav-item .nav-link:hover::before,
 .navbar-nav .nav-item .nav-link:focus::before,
 .navbar-nav .nav-item .dropdown-toggle:hover::before,
@@ -248,13 +247,18 @@ h2.social-media span {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* Remove Bootstrap's default dropdown arrow */
-.navbar .dropdown-toggle::after {
-  display: none !important;
-  content: none !important;
+/* Float-up effect on hover */
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .dropdown-toggle:hover {
+  transform: translateY(-3px);
 }
 
-/* Keep hover and focus clean */
+/* Fix for dropdown arrow */
+.navbar .dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Prevent Bootstrap hover background */
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link.active {
@@ -263,7 +267,7 @@ h2.social-media span {
   outline: none !important;
 }
 
-/* Dropdown menu styling */
+/* Dropdown styles */
 .navbar .dropdown-menu {
   background-color: #000;
   border: none;
@@ -271,14 +275,71 @@ h2.social-media span {
 
 .navbar .dropdown-menu .dropdown-item {
   color: #fff;
+  transition: all 0.3s ease;
 }
 
 .navbar .dropdown-menu .dropdown-item:hover {
   background-color: rgba(255, 0, 0, 0.2);
   color: #ff5e00;
+  transform: translateX(4px);
 }
 
 /* Keep underline visible when dropdown is open */
 .navbar .dropdown.show .dropdown-toggle::before {
   transform: translateX(-50%) scaleX(1);
+}
+
+/* ===================== Fixed Gradient + Blur Navbar (Final) ===================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+/* Gradient background layer */
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Blur effect when scrolled */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+.navbar.scrolled::before {
+  opacity: 0;
+}
+
+/* Mobile gradient tweak */
+@media (max-width: 768px) {
+  .navbar::before {
+    height: 160px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 55%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
 }
