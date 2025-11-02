@@ -9,7 +9,23 @@
   margin: 0 auto;
   height: max-content;
 }
-color
+
+.bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 5;
+}
+
 .carousel-item img {
   height: 100vh;
   width: 100vw;
@@ -29,16 +45,21 @@ color
 /* ===================== Content Sections ===================== */
 .news-feed-container {
   overflow-y: hidden;
-  margin: 8px 4rem;
+  margin-top: 8px 4rem;
+  background-color: #000;
 }
 
 .jumbotron {
   margin: 0;
   margin-bottom: 35px;
-  background-color: var(--white);
+  background-color: var(--black);
   padding: 0;
-  color: var(--black);
+  color: var(--white);
   font-size: 15px;
+}
+
+.body {
+  color: black;
 }
 
 .col-lg-6 p {
@@ -55,36 +76,38 @@ color
   margin: 32px 0;
   font-weight: 600;
   font-size: 30px;
+  color: var(--white);
 }
 
+/* Updated button to use red-outline-btn styling */
 .jumbotron .news-option button {
-  padding: 8px;
+  padding: 8px 20px;
   font-size: 15px;
-  border: 1px solid var(--black);
+  border: 2px solid #d10000;
+  color: #fff;
+  background: transparent;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  transition: all 0.35s ease;
 }
 
-.img-gradient::after {
-  background: linear-gradient(
-    to right bottom,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 1)
-  );
+.jumbotron .news-option button:hover {
+  background: #d10000;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 
 /* ===================== About Section ===================== */
 .about-us-container {
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(../img/cars/CR_X.jpg);
-  background-size: cover;
+  background-color: black;
   display: flex;
   text-align: center;
   align-items: center;
   color: var(--white);
-  padding: 8rem;
+  padding: 2rem;
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -95,6 +118,7 @@ color
 .left-container {
   text-align: start;
   width: 50%;
+  font-size: 0.9rem;
 }
 
 .right-container {
@@ -104,17 +128,28 @@ color
 }
 
 .right-container img {
-  width: 75%;
-  max-width: 95%;
-  height: 400px;
+  width: 65%;
+  max-width: 90%;
+  height: 350px;
   object-position: 10% 50%;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .about-us-container .left-container h2.camber-heading span {
   color: var(--red);
 }
 
+.about-us-container hr {
+  border: none;
+  height: 3px;
+  background-color: white;
+  width: 80%;
+  margin: 1.5rem 0;
+  opacity: 0.8;
+}
+
+/* ===================== Social Media Heading ===================== */
 h2.social-media {
   padding: 0 4rem;
   font-size: 40px;
@@ -135,7 +170,7 @@ h2.social-media span {
 /* ===================== Responsive Design ===================== */
 @media only screen and (max-width: 1366px) and (min-width: 1024px) {
   .carousel-inner img {
-    height: 50vh;
+    height: 90vh;
     width: 100vw;
     object-position: bottom;
     object-fit: cover;
@@ -144,7 +179,7 @@ h2.social-media span {
 
   .right-container img {
     width: 100%;
-    max-width: 75%;
+    max-width: 100;
   }
 }
 
@@ -226,7 +261,6 @@ h2.social-media span {
   padding: 0.5rem 0.75rem;
 }
 
-/* Underline effect */
 .navbar-nav .nav-item .nav-link::before,
 .navbar-nav .nav-item .dropdown-toggle::before {
   content: "";
@@ -249,18 +283,15 @@ h2.social-media span {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* Float-up effect on hover */
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item .dropdown-toggle:hover {
   transform: translateY(-3px);
 }
 
-/* Fix for dropdown arrow */
 .navbar .dropdown-toggle::after {
   display: none !important;
 }
 
-/* Prevent Bootstrap hover background */
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link.active {
@@ -269,7 +300,6 @@ h2.social-media span {
   outline: none !important;
 }
 
-/* Dropdown styles */
 .navbar .dropdown-menu {
   background-color: #000;
   border: none;
@@ -286,12 +316,11 @@ h2.social-media span {
   transform: translateX(4px);
 }
 
-/* Keep underline visible when dropdown is open */
 .navbar .dropdown.show .dropdown-toggle::before {
   transform: translateX(-50%) scaleX(1);
 }
 
-/* ===================== Fixed Gradient + Blur Navbar (Final) ===================== */
+/* ===================== Fixed Gradient + Blur Navbar ===================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -303,7 +332,6 @@ h2.social-media span {
   transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-/* Gradient background layer */
 .navbar::before {
   content: "";
   position: absolute;
@@ -322,7 +350,6 @@ h2.social-media span {
   transition: opacity 0.4s ease;
 }
 
-/* Blur effect when scrolled */
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px) saturate(180%);
@@ -333,7 +360,6 @@ h2.social-media span {
   opacity: 0;
 }
 
-/* Mobile gradient tweak */
 @media (max-width: 768px) {
   .navbar::before {
     height: 160px;
@@ -346,14 +372,257 @@ h2.social-media span {
   }
 }
 
-/* Home-Button*/
-.home-button{
-  color: #ffffff;
-  background-color: rgb(228, 2, 2);
+/* ===================== Home Button ===================== */
+.home-button {
+  position: relative;
+  display: inline-block;
+  color: #d10000;
+  background: transparent;
+  border: 2px solid #d10000;
   border-radius: 10px;
-  padding-left:18px;
-  padding-right:18px;
-  padding-top:8px;
-  padding-bottom:8px;
-  font-size:15px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s ease;
 }
+
+.home-button:hover {
+  color: #fff;
+  background: #d10000;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.home-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+}
+
+.home-button:hover::before {
+  left: 125%;
+}
+
+.home-button:active {
+  transform: scale(0.96);
+}
+
+/* ===================== NEW ADDITIONS ===================== */
+/* Red-outline button reuse class */
+.red-outline-btn {
+  border: 2px solid #d10000;
+  color: #fff;
+  background: transparent;
+  border-radius: 10px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  transition: all 0.35s ease;
+}
+.red-outline-btn:hover {
+  color: #fff;
+  background: #d10000;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+/* Divider between sections */
+.section-divider {
+  width: 80%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 60px auto;
+  border-radius: 4px;
+}
+
+.divider-about-us {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.divider-news-feed {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Dark background area (behind News Feed or Social Media) */
+.dark-bg-section {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(2px);
+  /*border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
+}
+
+/* Section headings unified style */
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: left;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.section-title span {
+  color: #d10000;
+}
+
+/* Social media wrapper alignment */
+.social-media-section {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 3rem 0;
+  color: #fff;
+}
+/* ======= FORCEFUL FIXES FOR NEWS FEED / ABOUT / SOCIAL CONTINUITY ======= */
+
+/* Make the page sections that should be dark actually span and appear dark */
+.about-us-container,
+.news-feed-container,
+.social-media-section {
+  width: 100%;
+  margin: 0;
+  background-color: #000 !important;
+  color: #fff !important;
+  box-sizing: border-box;
+}
+
+/* Remove side white sliver by using full-width inner padding
+   Keep content aligned by using inner padding rather than outer margins */
+.news-feed-container {
+  padding: 2rem !important; /* change horizontal padding as needed */
+}
+
+/* Ensure jumbotron inside news-feed is transparent and not showing Bootstrap background */
+.news-feed-container .jumbotron {
+  background: transparent !important;
+  margin: 0 auto;
+  padding: 0 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Make sure columns don't show white background */
+.news-feed-container .col-lg-6,
+.news-feed-container .news-feed-image,
+.news-feed-container .news-feed-text {
+  background: transparent !important;
+  color: #fff !important;
+  padding-right: 0rem; /* internal spacing */
+}
+
+/* Make images sit nicely and not leave white bars */
+.news-feed-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Ensure the large heading is visible white and span is red */
+.news-feed-heading,
+.section-title,
+.camber-heading,
+.camber-title,
+h2.social-media {
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* the red accent for the span (US / FEED / MEDIA) */
+.news-feed-heading span,
+.section-title span,
+.camber-heading span,
+h2.social-media span {
+  color: #d10000 !important;
+}
+
+/* If a previous rule set a heading background (that dark bar), clear it */
+.news-feed-heading,
+.section-title {
+  background: none !important;
+  padding: 18px 0 24px 0;
+  margin: 0 0 18px 0;
+}
+
+/* Divider lines — subtle and semi-transparent (as requested earlier) */
+.section-divider,
+.divider-about-us,
+.divider-news-feed {
+  width: 90%;
+  height: 1px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Keep Read More button style (red outline) working inside news feed */
+.news-feed-container .news-option .btn,
+.news-feed-container .news-option button,
+.news-feed-container .news-option .red-outline-btn {
+  color: #fff !important;
+  background: transparent !important;
+  border: 2px solid #d10000 !important;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .25s ease;
+}
+
+.news-feed-container .news-option .btn:hover,
+.news-feed-container .news-option .red-outline-btn:hover {
+  background: #d10000 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(209,0,0,0.25);
+}
+
+/* force columns to stack nicely on smaller screens */
+@media (max-width: 992px) {
+  .news-feed-container {
+    padding: 32px 2rem !important;
+  }
+  .news-feed-container .col-lg-6 {
+    padding: 0 !important;
+  }
+  .section-divider {
+    margin: 30px auto;
+  }
+}
+
+/* Extra safety: override any background set by Bootstrap jumbotron */
+.jumbotron {
+  background: transparent !important;
+}
+
+/* Safety for any element accidentally set to white */
+.news-feed-container * {
+  background: transparent !important;
+}
+
+/* If the top of the section still shows a white sliver, this removes it by forcing flow */
+html, body {
+  background-color: #000; /* only if site-wide black is acceptable — remove if not desired */
+}
+
+/* If you DON'T want the whole site background black, comment the last rule above.
+   Otherwise keep it to eliminate any white gaps caused by ancestor elements. */
+
+

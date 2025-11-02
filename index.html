@@ -59,7 +59,6 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="./res/img/cars/Beast.jpg" class="d-block" />
-          <div></div>
         </div>
         <div class="carousel-item">
           <img src="./res/img/cars/CR18.JPG" class="d-block" />
@@ -88,28 +87,56 @@
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
           </div>
         </a>
+        <div class="bottom-fade"></div>
       </div>
     </div>
 
-    <div id="news" class="news-feed-container">
-      <h2 class="camber-title" data-aos="fade-up">News <span>Feed</span></h2>
+    <!-- ABOUT US SECTION -->
+    <div class="about-us-container">
+      <div class="left-container" data-aos="fade-up">
+        <h2 class="camber-heading section-title">ABOUT <span>US</span></h2>
+        <p>
+          Camber Racing is the official Formula Student Combustion Team of SRM
+          IST. Every year, a team of passionate students work together to
+          Design, Fabricate and Drive a prototype race car at various
+          competitions, both national and international.
+        </p>
+        <a href="./aboutus.html" class="home-button red-outline-btn">Know More</a>
+      </div>
 
-      <div class="jumbotron row">
-        <div class="col-lg-6">
-          <img src="./res/img/cars/CR16.jpg" />
+      <div class="right-container">
+        <img src="./res/img/aboutUs/FB2019-Camber-Racing-Web_SK13636.jpg" />
+      </div>
+    </div>
+
+    <!-- Divider below About Us -->
+    <div class="section-divider divider-about-us"></div>
+
+    <!-- NEWS FEED SECTION -->
+    <div id="news" class="news-feed-container dark-bg-section">
+      <h2 class="camber-title news-feed-heading section-title" data-aos="fade-up">
+        News <span>Feed</span>
+      </h2>
+
+      <div class="jumbotron row news-feed-content">
+        <div class="col-lg-6 news-feed-image">
+          <img src="./res/img/cars/CR16.jpg" alt="News Feed Image" />
         </div>
-        <div class="col-lg-6">
-          <p>10 July</p>
-          <h4>SPLIT SECOND: OUR MONTHYLY NEWS LETTER IS OUT</h4>
+
+        <div class="col-lg-6 news-feed-text">
+          <p class="news-date" data-aos="fade-up" data-aos="fade-up">10 July</p>
+          <h4 class="news-title" data-aos="fade-up">SPLIT SECOND: OUR MONTHLY NEWSLETTER IS OUT</h4>
+
           <div class="col-lg-5 news-option">
             <button
-              class="btn btn-default"
+              class="home-button red-outline-btn"
               data-toggle="modal"
-              data-target="#exampleModalCenter"
+              data-target="#exampleModalCenter" 
             >
               READ MORE
             </button>
           </div>
+
           <!-- Modal -->
           <div
             class="modal fade"
@@ -122,9 +149,10 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">
-                    News title
-                  </h5>
+                  <h2 class="camber-title modal-heading">
+                    News <span>Feed</span>
+                  </h2>
+
                   <button
                     type="button"
                     class="close"
@@ -134,10 +162,11 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
+
                 <div class="modal-body">
                   It's been a while since we've had normalcy in our lives. Well,
                   unless you count this, our new normal. I've lost track, as
-                  many of your probably have, of the amount of time I've spent
+                  many of you probably have, of the amount of time I've spent
                   in this strange, yet familiar situation. Google tells me that
                   it began on March 25th, but it feels shorter and longer than
                   nearly 4 months. When we left the college, I remember our last
@@ -147,12 +176,12 @@
                   the thought. Two weeks was invaluable time and we had an event
                   in 3 months.
                 </div>
+
                 <div class="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
+                    class="btn red-outline-btn"
+                    data-dismiss="modal">
                     Close
                   </button>
                 </div>
@@ -163,39 +192,30 @@
       </div>
     </div>
 
-    <div class="about-us-container">
-      <div class="left-container" data-aos="fade-up">
-        <h2 class="camber-heading">ABOUT <span>US</span></h2>
-        <p>
-          Camber Racing is the official Formula Student Combustion Team of SRM
-          IST. Every year, the a team of passionate students work together to
-          Design, Fabricate and Drive a prototype race car at various
-          competitions, both national and international.
-        </p>
-        <a type="button" class="btn btn-danger home-button" href="./aboutus.html">Know More</a>
-      </div>
-      <div class="right-container">
-        <img src="./res/img/aboutUs/FB2019-Camber-Racing-Web_SK13636.jpg" />
-      </div>
-    </div>
+    <!-- Divider below News Feed -->
+    <div class="section-divider divider-news-feed"></div>
 
-    <div data-aos="fade-up">
-      <h2 class="social-media">SOCIAL <span>MEDIA</span></h2>
+    <!-- SOCIAL MEDIA SECTION -->
+    <div data-aos="fade-up" class="social-media-section">
+      <h2 class="social-media section-title">SOCIAL <span>MEDIA</span></h2>
     </div>
 
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div
-      class="elfsight-app-8b79ffc0-9f92-4bc0-a30e-acb2c561fe8f instaWidget"
-    ></div>
+    <div class="elfsight-app-8b79ffc0-9f92-4bc0-a30e-acb2c561fe8f instaWidget"></div>
+
     <script>
       const hide = setInterval(() => {
         const instaFree = document.querySelector(".instaWidget > a");
-        instaFree.style.display = "none";
-        if (instaFree) clearInterval(hide);
+        if (instaFree) {
+          instaFree.style.display = "none";
+          clearInterval(hide);
+        }
       }, 1000);
     </script>
 
     <footer></footer>
+
+    <!-- JS Libraries -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -209,15 +229,18 @@
       crossorigin="anonymous"
       defer
     ></script>
+
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
       defer
     ></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
       AOS.init({ duration: 1200 });
     </script>

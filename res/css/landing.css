@@ -138,7 +138,7 @@ h2.camber-title {
   font-size: 40px;
   font-weight: 600;
   text-align: start;
-  color: var(--black);
+  color: var(--white);
   margin: 30px auto;
 }
 h2.camber-title span {
@@ -457,3 +457,4 @@ footer.camber-footer small a {
   --red: #e9081e;
   --white: #ffffff;
 }
+
