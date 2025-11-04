@@ -523,7 +523,7 @@ h2.social-media span {
 .news-feed-container .news-feed-text {
   background: transparent !important;
   color: #fff !important;
-  padding-right: 0rem; /* internal spacing */
+  padding-right: 1rem; /* internal spacing */
 }
 
 /* Make images sit nicely and not leave white bars */
@@ -562,7 +562,15 @@ h2.social-media span {
   margin: 0 0 18px 0;
 }
 
-/* Divider lines — subtle and semi-transparent (as requested earlier) */
+.heading-content-divider{
+  width: 60px;
+  height: 3px;
+  background: #ffffff;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Divider lines — subtle and semi-transparent  */
 .section-divider,
 .divider-about-us,
 .divider-news-feed {
@@ -617,12 +625,11 @@ h2.social-media span {
   background: transparent !important;
 }
 
-/* If the top of the section still shows a white sliver, this removes it by forcing flow */
+
 html, body {
   background-color: #000; /* only if site-wide black is acceptable — remove if not desired */
 }
 
-/* If you DON'T want the whole site background black, comment the last rule above.
-   Otherwise keep it to eliminate any white gaps caused by ancestor elements. */
+
 
 

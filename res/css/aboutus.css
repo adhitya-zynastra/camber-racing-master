@@ -73,6 +73,7 @@ img {
     flex-flow: column;
     align-items: center;
     padding: 0rem 0rem;
+    about-us-content;
   }
 
   .about-us-text,
@@ -82,6 +83,7 @@ img {
     padding: 0.5rem;
     align-self: center;
     margin: 0.5rem;
+    color: white;
   }
   .about-us-img img {
     max-height: 20rem;
