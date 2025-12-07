@@ -131,11 +131,10 @@ const footer = `
     <hr class="mx-5" />
     <div class="row hr-below mx-5">
       <div class="col-lg 8 col-md-7 col-sm-7 copyright">
-        <small>&copy;Copyright Camber Racing SRMIST | 2020</small>
+        <small>&copy;Copyright Camber Racing SRMIST | 2025</small>
       </div>
       <div class="col-lg-4 col-md-5 col-sm-5 brand-mark">
-        <small>Made with <span>&hearts;</span> from
-          <a href="https://srmkzilla.net" target="_blank"><span>SRMKZILLA</span></a></small>
+        <small>Made with <span>&hearts;</span> from <a href="https://srmkzilla.net" target="_blank"><span>SRMKZILLA</span></a></small>
       </div>
     </div>
   </footer>`;

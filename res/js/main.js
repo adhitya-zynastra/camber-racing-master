@@ -1,4 +1,4 @@
-// holaaaaaa.....
+
 
 let a = $("#news");
 let b = $("#newsbtn");

@@ -69,8 +69,7 @@ nav.navbar {
   margin: 0;
   padding: 8px;
   width: 136px;
-  height: 80px;
-  clip-path: polygon(0 0, 100% 0, 80% 70%, 0 70%);
+  height: 60px;
 }
 
 .navbar-brand img {
@@ -82,9 +81,11 @@ nav.navbar {
   display: inline;
   top: -6px;
   left: 136px;
-  background-color: transparent;
+  background-color: white;
   margin-top: 0;
-  height: 70px;
+  height: 66px;
+  padding-left:0px;
+  clip-path: polygon(0 0,75% 0,100% 50%,75% 100%,0 100%);
 }
 
 .nav-link {

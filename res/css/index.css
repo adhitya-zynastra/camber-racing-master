@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@font-face {
+  font-family: air-mitalic;
+  src: url(../fonts/air_mitalic.ttf) format("truetype");
+}
 
 /* ===================== Carousel ===================== */
 .carousel-inner {
@@ -465,8 +469,6 @@ h2.social-media span {
 .dark-bg-section {
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(2px);
-  /*border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
 }
 
 /* Section headings unified style */
@@ -476,7 +478,7 @@ h2.social-media span {
   text-align: left;
   color: #fff;
   letter-spacing: 1px;
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
 .section-title span {
   color: #d10000;
@@ -491,7 +493,6 @@ h2.social-media span {
 }
 /* ======= FORCEFUL FIXES FOR NEWS FEED / ABOUT / SOCIAL CONTINUITY ======= */
 
-/* Make the page sections that should be dark actually span and appear dark */
 .about-us-container,
 .news-feed-container,
 .social-media-section {
@@ -502,13 +503,10 @@ h2.social-media span {
   box-sizing: border-box;
 }
 
-/* Remove side white sliver by using full-width inner padding
-   Keep content aligned by using inner padding rather than outer margins */
 .news-feed-container {
-  padding: 2rem !important; /* change horizontal padding as needed */
+  padding: 2rem !important;
 }
 
-/* Ensure jumbotron inside news-feed is transparent and not showing Bootstrap background */
 .news-feed-container .jumbotron {
   background: transparent !important;
   margin: 0 auto;
@@ -518,16 +516,14 @@ h2.social-media span {
   border: none !important;
 }
 
-/* Make sure columns don't show white background */
 .news-feed-container .col-lg-6,
 .news-feed-container .news-feed-image,
 .news-feed-container .news-feed-text {
   background: transparent !important;
   color: #fff !important;
-  padding-right: 1rem; /* internal spacing */
+  padding-right: 1rem;
 }
 
-/* Make images sit nicely and not leave white bars */
 .news-feed-container img {
   display: block;
   width: 100%;
@@ -536,7 +532,6 @@ h2.social-media span {
   object-fit: cover;
 }
 
-/* Ensure the large heading is visible white and span is red */
 .news-feed-heading,
 .section-title,
 .camber-heading,
@@ -545,17 +540,17 @@ h2.social-media {
   color: #ffffff !important;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: air-mitalic !important;
 }
 
-/* the red accent for the span (US / FEED / MEDIA) */
 .news-feed-heading span,
 .section-title span,
 .camber-heading span,
 h2.social-media span {
   color: #d10000 !important;
+  font-family: air-mitalic !important;
 }
 
-/* If a previous rule set a heading background (that dark bar), clear it */
 .news-feed-heading,
 .section-title {
   background: none !important;
@@ -570,7 +565,7 @@ h2.social-media span {
   display: block;
   width: 120px;
   height: 3px;
-  background: linear-gradient(90deg, #ffffff, #b50000, #000000);
+  background: linear-gradient(90deg, #000000, #b50000, #000000);
   background-size: 200% 100%;
   border: none;
   border-radius: 3px;
@@ -581,13 +576,11 @@ h2.social-media span {
   transition: width 0.5s ease, box-shadow 0.5s ease, opacity 0.3s ease;
 }
 
-/* Hover effect – shrink line smoothly */
 .left-container:hover .heading-content-divider {
   width: 150px;
   box-shadow: 0 0 15px rgba(255, 77, 0, 0.8);
 }
 
-/* Animate the gradient to create a smooth moving glow */
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
@@ -600,18 +593,15 @@ h2.social-media span {
   }
 }
 
-
-/* Divider lines — subtle and semi-transparent  */
 .section-divider,
 .divider-about-us,
 .divider-news-feed {
   width: 90%;
   height: 1px;
   margin: 40px auto;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
-/* Keep Read More button style (red outline) working inside news feed */
 .news-feed-container .news-option .btn,
 .news-feed-container .news-option button,
 .news-feed-container .news-option .red-outline-btn {
@@ -622,7 +612,7 @@ h2.social-media span {
   border-radius: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .news-feed-container .news-option .btn:hover,
@@ -630,10 +620,9 @@ h2.social-media span {
   background: #d10000 !important;
   color: #fff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(209,0,0,0.25);
+  box-shadow: 0 6px 20px rgba(209, 0, 0, 0.25);
 }
 
-/* force columns to stack nicely on smaller screens */
 @media (max-width: 992px) {
   .news-feed-container {
     padding: 32px 2rem !important;
@@ -646,21 +635,221 @@ h2.social-media span {
   }
 }
 
-/* Extra safety: override any background set by Bootstrap jumbotron */
 .jumbotron {
   background: transparent !important;
 }
 
-/* Safety for any element accidentally set to white */
 .news-feed-container * {
   background: transparent !important;
 }
 
-
 html, body {
-  background-color: #000; /* only if site-wide black is acceptable — remove if not desired */
+  background-color: #000;
 }
 
+/* =========== NEWS FEED MODAL THEME (BLACK, CLEAN) =========== */
 
+#exampleModalCenter .modal-dialog {
+  max-width: 700px;
+  width: 90vw;
+  margin: 1.75rem auto;
+}
 
+#exampleModalCenter .modal-content {
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 12px;
 
+  /* NEW: red border */
+  border: 2px solid #d10000;
+}
+
+#exampleModalCenter .modal-header {
+  border-bottom: none;
+  padding: 1rem 1.5rem 0.25rem;
+}
+
+/* NEWS FEED in one line: NEWS white, FEED red */
+#exampleModalCenter .modal-heading {
+  margin: 0;
+
+  /* ensure font consistency */
+  font-family: air-mitalic !important;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  color: #ffffff;
+}
+
+#exampleModalCenter .modal-heading span {
+  color: #d10000;
+  font-family: air-mitalic !important; /* FEED uses same font */
+}
+
+/* remove old decorative line on the right */
+#exampleModalCenter .modal-header::after {
+  display: none;
+}
+
+/* divider between heading and content (uses gradient style) */
+#exampleModalCenter .modal-heading-divider {
+  margin: 0 1.5rem 1rem 1.5rem !important;
+  width: 180px;
+}
+
+#exampleModalCenter .modal-body {
+  padding: 0 1.5rem 1.5rem;
+
+  /* slightly smaller content font */
+  font-size: 0.93rem; 
+  line-height: 1.55;
+  color: #ffffff;
+}
+
+#exampleModalCenter .modal-footer {
+  border-top: none;
+  padding: 0 1.5rem 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+#exampleModalCenter .modal-footer .btn {
+  border-color: #d10000;
+  color: #ffffff;
+  background: transparent;
+}
+
+#exampleModalCenter .modal-footer .btn:hover {
+  background: #d10000;
+  color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  #exampleModalCenter .modal-dialog {
+    max-width: 95vw;
+  }
+  #exampleModalCenter .modal-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* ========================================= SPONSOR SLIDER ====================================== */
+
+.sponsor-heading{
+  text-align:center;
+  margin-top:80px;
+  margin-bottom:40px;
+  letter-spacing: 1px;
+}
+
+.sponsor-divider {
+  margin: 0 auto 30px auto !important;
+  width: 350px !important; 
+}
+
+.sponsor-para {
+  text-align: center !important;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+  color: #ffffff !important;
+  font-size: 18px;
+  line-height: 1.55;
+  opacity: 0.92;
+}
+
+.sponsor-para span {
+  color: #d10000;
+  font-weight: 600;
+}
+
+.sponsor-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  border-top: 3px solid #d10000;
+  border-bottom: 3px solid #d10000;
+  border-left: none;
+  border-right: none;
+  padding: 80px 0;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-track {
+  display: flex;
+  gap: 70px;
+  animation: scroll 25s linear infinite;
+  width: max-content;
+}
+
+.sponsor-track img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-track img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-200px * 5)); }
+}
+
+/***** RESPONSIVE CONTROL FOR SPONSOR CAROUSEL *****/
+
+@media (max-width: 1200px) {
+  .sponsor-track img {
+    height: 55px;
+  }
+  .sponsor-track {
+    gap: 55px;
+  }
+  .sponsor-slider {
+    padding: 22px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .sponsor-track img {
+    height: 50px;
+  }
+  .sponsor-track {
+    gap: 45px;
+  }
+  .sponsor-slider {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsor-track img {
+    height: 40px;
+  }
+  .sponsor-track {
+    gap: 35px;
+  }
+  .sponsor-slider {
+    padding: 18px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsor-track img {
+    height: 35px;
+  }
+  .sponsor-track {
+    gap: 28px;
+  }
+  .sponsor-slider {
+    padding: 15px 0;
+  }
+}
