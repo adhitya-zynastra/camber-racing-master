@@ -784,10 +784,9 @@ html, body {
 .sponsor-track {
   display: flex;
   gap: 70px;
-  animation: scroll 25s linear infinite;
   width: max-content;
+  animation: sponsor-scroll 80s linear infinite; /* slower + smoother */
 }
-
 .sponsor-track img {
   height: 40px;
   width: auto;
@@ -799,9 +798,15 @@ html, body {
   transform: scale(1.1);
 }
 
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(-200px * 5)); }
+/* Smooth infinite scroll using duplicated content */
+@keyframes sponsor-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* move left by half the track, because you duplicated the logos */
+    transform: translateX(-50%);
+  }
 }
 
 /***** RESPONSIVE CONTROL FOR SPONSOR CAROUSEL *****/
