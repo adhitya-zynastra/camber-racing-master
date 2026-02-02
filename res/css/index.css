@@ -184,7 +184,7 @@ h2.social-media span {
 
 @media only screen and (max-width: 1024px) {
   .carousel-inner img {
-    height: 30vh;
+    height: 45vh;
     width: 100vw;
     object-position: bottom;
     object-fit: cover;
