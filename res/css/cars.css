@@ -1,25 +1,9 @@
-@font-face {
-  font-family: roboto-regular;
-  src: url(../fonts/Roboto-Regular.ttf) format("truetype");
-}
-
-* {
-  font-family: roboto-regular;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
 section.cars-container {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
+
 section.cars-container .landing-heading {
   margin: 5rem 0 0 8rem;
 }
@@ -45,6 +29,7 @@ section.cars-container .landing-heading {
 .even img {
   padding: 0 3rem 0 0;
 }
+
 .odd img {
   padding: 0 3rem 0 3rem;
 }
@@ -65,6 +50,7 @@ section.cars-container .landing-heading {
 .column1 {
   grid-column: 1;
 }
+
 .column2 {
   grid-column: 2;
 }
@@ -72,6 +58,7 @@ section.cars-container .landing-heading {
 .even {
   flex-flow: row-reverse;
 }
+
 .odd {
   flex-flow: row;
 }
@@ -92,15 +79,19 @@ section.cars-container .landing-heading {
     padding: 1rem 0;
     font-size: 0.75rem;
   }
+
   .cars h1 {
     padding-left: 1rem;
   }
+
   .cars h3 {
     padding-left: 1.25rem;
   }
+
   .cars p {
     padding: 1rem;
   }
+
   .cars img {
     /* display: block; */
     /* object-fit: scale-down; */
@@ -112,6 +103,7 @@ section.cars-container .landing-heading {
 
     padding: 00;
   }
+
   .cars li {
     padding-left: 1.5rem;
     font-size: 0.65rem;

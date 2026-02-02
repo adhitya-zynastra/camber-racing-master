@@ -134,17 +134,7 @@ nav.navbar {
   z-index: 1;
 }
 
-h2.camber-title {
-  padding: 0 0;
-  font-size: 40px;
-  font-weight: 600;
-  text-align: start;
-  color: var(--white);
-  margin: 30px auto;
-}
-h2.camber-title span {
-  color: var(--red);
-}
+
 footer.camber-footer {
   margin-top: 1rem;
   text-align: center;
