@@ -751,12 +751,14 @@ body {
 
 .sponsor-divider {
   margin: 0 auto 30px auto;
-  width: 350px;
+  max-width: 350px;
+  width: 80%;
 }
 
 body .sponsor-divider {
   margin: 0 auto 30px auto;
-  width: 350px;
+  max-width: 350px;
+  width: 80%;
 }
 
 .sponsor-para {
@@ -881,5 +883,18 @@ body .sponsor-para {
 
   .sponsor-slider {
     padding: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .section-title,
+  .camber-heading,
+  h2.social-media {
+    font-size: 28px;
+  }
+
+  .news-feed-container {
+    padding: 1rem;
   }
 }
