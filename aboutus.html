@@ -1,192 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/res/img/logos/logo.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Camber Racing SRM | About Us</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/res/img/logos/logo.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Camber Racing SRM | About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!--CSS Links-->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="res/css/aboutus.css" />
-    <link rel="stylesheet" href="res/css/landing.css" />
-    <link rel="stylesheet" href="res/css/index.css">
+  <!--CSS Links-->
+  <link rel="stylesheet" href="res/css/landing.css" />
+  <link rel="stylesheet" href="res/css/aboutus.css" />
+  <link rel="stylesheet" href="res/css/index.css">
 
 
-    <!-- <link rel="stylesheet" href="res/css/global.css" /> -->
+  <!-- <link rel="stylesheet" href="res/css/global.css" /> -->
 
-    <!--Fontawesome-->
-    <script
-      src="https://kit.fontawesome.com/95e303bf9f.js"
-      crossorigin="anonymous"
-    ></script>
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/95e303bf9f.js" crossorigin="anonymous"></script>
 
-    <!-- Mapbox -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
+  <!-- Mapbox -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
 
-    <!-- scripts -->
-    <script src="./res/js/header-footer.js" defer></script>
-  </head>
+  <!-- scripts -->
+  <script src="./res/js/header-footer.js" defer></script>
+</head>
 
-  <body>
-    <header></header>
-    <div class="landing">
-      <img class="" src="./res/img/aboutUs/landing.png" alt="Camber Racing" />
+<body>
+  <header></header>
+  <div class="landing">
+    <img class="" src="./res/img/aboutUs/landing.png" alt="Camber Racing" />
+  </div>
+
+  <section class="about-us">
+    <div class="about-us-text">
+      <h2 class="camber-title" data-aos="fade-up">ABOUT <span>US</span></h2>
+      <p class="text-light">
+        Camber Racing is the Formula Student combustion team of SRM IST,
+        Chennai. The team was founded in 2009 when a group of young engineers
+        decided to turn their dreams into reality and went on to make the
+        first prototype, "CR800". Since then, there has been no looking back.
+        Nine cars, 26 awards and 2 times National Champions.
+      </p>
+      <br />
+      <p class="text-light">
+        The team comprises of passionate Undergraduate students from various
+        diciplines and gives them a platform to apply and test their skills to
+        the fullest. The team has been participating in various competitions,
+        namely Formula Student Germany, Formula Bharat and Supra SAE India
+        under the Combustion class for 10 glorious years.
+      </p>
+      <br />
+      <p class="text-light">
+        Our teams goal is to develop individuals who are not only skilled in
+        designing and engineering a race car, but also to help them gain
+        experience in team work, project management, resource planning which
+        makes them better engineers for the future. Hence, our team's motto,
+      </p>
+      <br />
+      <p class="text-light">Building people, not just Cars!</p>
     </div>
+    <div class="about-us-img">
+      <img class="" src="./res/img/logos/Front logo.png" alt="brand-image" />
+    </div>
+  </section>
+  <img class="" src="./res/img/aboutUs/Formula Student.png" alt="landing image" />
+  <section class="formula-student">
+    <h2 class="camber-title" data-aos="fade-up">Formula <span>Student</span></h2>
+    <div class="formula-student-img">
+      <div>
+        <h4 class="text-light">Static Events</h4>
+        <canvas id="staticChart"></canvas>
+      </div>
+      <div>
+        <h4 class="text-light">Dynamic Events</h4>
+        <canvas id="dynamicChart"></canvas>
+      </div>
+    </div>
+    <div class="formula-student-text">
+      <p class="text-light">
+        Formula Student is the largest student design engineering competition
+        sanctioned by the Society of Automobile Engineers (SAE). Founded in
+        1998 in the United States of America, it now has several competitions
+        in various countries around the globe throughout the year. This
+        competition has an objective to enable the student to design and
+        fabricate an “Open Wheeled Weekend Racer” meeting certain standards
+        and rules. The best team is not the one with the fastest car, but
+        rather the one with cost-efficient manufacturing and feasible
+        financial statements and sales pitches.
+      </p>
+      <p class="text-light">
+        The Competition has been divided into 2 sets of events, Dynamic and
+        Static. The dynamic events include all the on-track bouts like
+        Skid-Pad, Acceleration, Autocross and Endurance. The static events
+        include a business plan and marketing strategy which tests cost
+        analysis presentation.
+      </p>
+      <p class="text-light">
+        Formula Student challenges the team members to go the extra mile in
+        their education by enriching it with the real-life experience of what
+        it takes to build and manufacture an industry-ready racecar while
+        considering the economic aspects of the automotive industry. Teams
+        operate under the assumption that they are a manufacturer developing a
+        prototype to be evaluated for production. The target audience is the
+        non-professional Weekend-Racer. The racecar must be equipped with
+        characteristics such as acceleration, braking and handling.
+      </p>
+      <p class="text-light">
+        Teams face the challenge of composing a complete package consisting of
+        a well-constructed racecar and a sales plan that best matches the
+        given criteria. The decision is made by a jury of experts from the
+        motorsport, automotive and supplier industries. The jury will judge
+        every team's car and sales plan based on construction, cost planning
+        and sales presentation. The rest of the judging will be done out on
+        the track, where the students demonstrate in several performance tests
+        how well their self-built racecars fare in the real environment.
+      </p>
+      <br />
+      <p><b>Building people, not just Cars!</b></p>
+    </div>
+  </section>
+  <footer class="camber-footer container-fluid" id="contact" r></footer>
 
-    <section class="about-us">
-      <div class="about-us-text">
-        <h2 class="camber-title" data-aos="fade-up">ABOUT <span>US</span></h2>
-        <p class="text-light">
-          Camber Racing is the Formula Student combustion team of SRM IST,
-          Chennai. The team was founded in 2009 when a group of young engineers
-          decided to turn their dreams into reality and went on to make the
-          first prototype, "CR800". Since then, there has been no looking back.
-          Nine cars, 26 awards and 2 times National Champions.
-        </p>
-        <br />
-        <p class="text-light">
-          The team comprises of passionate Undergraduate students from various
-          diciplines and gives them a platform to apply and test their skills to
-          the fullest. The team has been participating in various competitions,
-          namely Formula Student Germany, Formula Bharat and Supra SAE India
-          under the Combustion class for 10 glorious years.
-        </p>
-        <br />
-        <p class="text-light">
-          Our teams goal is to develop individuals who are not only skilled in
-          designing and engineering a race car, but also to help them gain
-          experience in team work, project management, resource planning which
-          makes them better engineers for the future. Hence, our team's motto,
-        </p>
-        <br />
-        <p class="text-light">Building people, not just Cars!</p>
-      </div>
-      <div class="about-us-img">
-        <img class="" src="./res/img/logos/Front logo.png" alt="brand-image" />
-      </div>
-    </section>
-    <img
-      class=""
-      src="./res/img/aboutUs/Formula Student.png"
-      alt="landing image"
-    />
-    <section class="formula-student">
-      <h2 class="camber-title" data-aos="fade-up">Formula <span>Student</span></h2>
-      <div class="formula-student-img">
-        <div>
-          <h4 class="text-light">Static Events</h4>
-          <canvas id="staticChart"></canvas>
-        </div>
-        <div>
-          <h4 class="text-light">Dynamic Events</h4>
-          <canvas id="dynamicChart"></canvas>
-        </div>
-      </div>
-      <div class="formula-student-text">
-        <p class="text-light">
-          Formula Student is the largest student design engineering competition
-          sanctioned by the Society of Automobile Engineers (SAE). Founded in
-          1998 in the United States of America, it now has several competitions
-          in various countries around the globe throughout the year. This
-          competition has an objective to enable the student to design and
-          fabricate an “Open Wheeled Weekend Racer” meeting certain standards
-          and rules. The best team is not the one with the fastest car, but
-          rather the one with cost-efficient manufacturing and feasible
-          financial statements and sales pitches.
-        </p>
-        <p class="text-light">
-          The Competition has been divided into 2 sets of events, Dynamic and
-          Static. The dynamic events include all the on-track bouts like
-          Skid-Pad, Acceleration, Autocross and Endurance. The static events
-          include a business plan and marketing strategy which tests cost
-          analysis presentation.
-        </p>
-        <p class="text-light">
-          Formula Student challenges the team members to go the extra mile in
-          their education by enriching it with the real-life experience of what
-          it takes to build and manufacture an industry-ready racecar while
-          considering the economic aspects of the automotive industry. Teams
-          operate under the assumption that they are a manufacturer developing a
-          prototype to be evaluated for production. The target audience is the
-          non-professional Weekend-Racer. The racecar must be equipped with
-          characteristics such as acceleration, braking and handling.
-        </p>
-        <p class="text-light">
-          Teams face the challenge of composing a complete package consisting of
-          a well-constructed racecar and a sales plan that best matches the
-          given criteria. The decision is made by a jury of experts from the
-          motorsport, automotive and supplier industries. The jury will judge
-          every team's car and sales plan based on construction, cost planning
-          and sales presentation. The rest of the judging will be done out on
-          the track, where the students demonstrate in several performance tests
-          how well their self-built racecars fare in the real environment.
-        </p>
-        <br />
-        <p><b>Building people, not just Cars!</b></p>
-      </div>
-    </section>
-    <footer class="camber-footer container-fluid" id="contact" r></footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- jQuery Script -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Popper.js Script  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Chart.js Script  -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.1/chart.min.js"
-      integrity="sha512-2uu1jrAmW1A+SMwih5DAPqzFS2PI+OPw79OVLS4NJ6jGHQ/GmIVDDlWwz4KLO8DnoUmYdU8hTtFcp8je6zxbCg=="
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- jQuery Script -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <!-- Popper.js Script  -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!-- Chart.js Script  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.1/chart.min.js"
+    integrity="sha512-2uu1jrAmW1A+SMwih5DAPqzFS2PI+OPw79OVLS4NJ6jGHQ/GmIVDDlWwz4KLO8DnoUmYdU8hTtFcp8je6zxbCg=="
+    crossorigin="anonymous"></script>
+  <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
       integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
       crossorigin="anonymous"
     ></script> -->
-    <!-- Bootstrap Script -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
-    <script src="./res/js/main.js"></script>
-    <script src="./res/js/aboutus.js"></script>
-    <!-- add animation to navbar -->
-    <script src="res/js/landing.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1200 });
-    </script>
-  </body>
+  <!-- Bootstrap Script -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
+  <script src="./res/js/main.js"></script>
+  <script src="./res/js/aboutus.js"></script>
+  <!-- add animation to navbar -->
+  <script src="res/js/landing.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+
 </html>

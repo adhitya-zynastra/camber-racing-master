@@ -251,12 +251,11 @@ function renderCar(car) {
   const photo = [];
 
   //Create image component for each of the pics of the car
-  for (let i = 0; i < car.noOfPics; i++) {
     photo[i] = document.createElement("img");
     //image naming format:- (id of car + 1) '-' (imageNumber + 1)
     photo[i].src = `./res/img/carList/${car.id + 1}-${i + 1}.jpg`;
+    photo[i].alt = `${car.name} image ${i + 1}`;
     photoDiv.appendChild(photo[i]);
-  }
 
   const content = document.createElement("div");
   const name = document.createElement("h1");
