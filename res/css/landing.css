@@ -2,10 +2,12 @@
   font-family: roboto-regular;
   src: url(../fonts/Roboto-Regular.ttf) format("truetype");
 }
+
 @font-face {
   font-family: air-mitalic;
   src: url(../fonts/air_mitalic.ttf) format("truetype");
 }
+
 * {
   font-family: roboto-regular;
   margin: 0;
@@ -22,7 +24,8 @@ body {
 
 .ml-mr-auto {
   margin-left: auto;
-  margin-right: auto;;
+  margin-right: auto;
+  ;
 }
 
 .go-to-top {
@@ -39,6 +42,7 @@ body {
   opacity: 0.9;
   border-radius: 0.25rem;
 }
+
 .go-to-top:hover {
   opacity: 1;
   color: var(--white);
@@ -76,6 +80,7 @@ nav.navbar {
   width: 104px;
   height: auto;
 }
+
 .navbar-sponsor {
   position: fixed;
   display: inline;
@@ -84,8 +89,8 @@ nav.navbar {
   background-color: white;
   margin-top: 0;
   height: 66px;
-  padding-left:0px;
-  clip-path: polygon(0 0,75% 0,100% 50%,75% 100%,0 100%);
+  padding-left: 0px;
+  clip-path: polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%);
 }
 
 .nav-link {
@@ -115,6 +120,7 @@ nav.navbar {
 .dropdown:hover {
   cursor: pointer;
 }
+
 .dropdown-toggle::after {
   color: white;
   margin: auto;
@@ -126,10 +132,12 @@ nav.navbar {
   margin: 0;
   padding: 0.2rem 3rem;
 }
+
 .dropdown-carlist .dropdown-item:hover {
   background-color: var(--red);
   /* padding: 0.3rem 3.3rem; */
 }
+
 .carousel-indicators {
   z-index: 1;
 }
@@ -142,6 +150,7 @@ footer.camber-footer {
   background-color: var(--black);
   color: #ffffff;
 }
+
 .col-md-4 {
   padding: 24px 50px;
 }
@@ -156,6 +165,7 @@ footer.camber-footer div h5 {
   color: var(--red);
   margin-top: 2rem;
 }
+
 footer.camber-footer div img {
   width: 172px;
 }
@@ -169,6 +179,7 @@ footer.camber-footer div img {
   width: max-content;
   padding: 0 2rem;
 }
+
 .footer-newsletter-button {
   width: max-content;
 }
@@ -177,8 +188,13 @@ footer.camber-footer div h6 {
   font-weight: 700;
   font-size: 18px;
   color: var(--white);
-  margin: 0 !important;
+  margin: 0;
 }
+
+body footer.camber-footer div h6 {
+  margin: 0;
+}
+
 footer.camber-footer div div.social-media-icon {
   text-align: center;
   padding: 0px;
@@ -200,6 +216,7 @@ footer.camber-footer div div.social-media-icon a i {
 footer.camber-footer div div.social-media-icon a i:hover {
   color: var(--red);
 }
+
 .footer-contact-us {
   width: 20rem;
 }
@@ -208,13 +225,21 @@ footer.camber-footer div div.footer-contact-us .heading {
   font-weight: 600;
   font-size: 21px;
   color: var(--red);
-  margin: 2rem 0 1.4rem 0 !important;
+  margin: 2rem 0 1.4rem 0;
   text-align: start;
 }
 
+body footer.camber-footer div div.footer-contact-us .heading {
+  margin: 2rem 0 1.4rem 0;
+}
+
 footer.camber-footer div div.footer-contact-us h6 {
-  margin: 0.4rem 0 !important;
+  margin: 0.4rem 0;
   font-weight: 600;
+}
+
+body footer.camber-footer div div.footer-contact-us h6 {
+  margin: 0.4rem 0;
 }
 
 footer.camber-footer div div.footer-contact-us div p {
@@ -222,6 +247,7 @@ footer.camber-footer div div.footer-contact-us div p {
   margin-right: 1rem;
   /* margin-bottom: 2rem; */
 }
+
 footer.camber-footer div div.footer-contact-us ul li :hover {
   color: var(--red);
 }
@@ -229,6 +255,7 @@ footer.camber-footer div div.footer-contact-us ul li :hover {
 footer.camber-footer div div.footer-contact-us ul li a .fas {
   font-size: 16px;
 }
+
 footer.camber-footer div div.footer-button a:hover {
   text-decoration: none;
 }
@@ -236,13 +263,19 @@ footer.camber-footer div div.footer-button a:hover {
 .input-section {
   text-align: center;
 }
+
 footer.camber-footer div .heading {
   font-weight: 600;
   font-size: 21px;
   color: var(--red);
-  margin: 2rem 0 1.4rem 0 !important;
+  margin: 2rem 0 1.4rem 0;
   text-align: start;
 }
+
+body footer.camber-footer div .heading {
+  margin: 2rem 0 1.4rem 0;
+}
+
 .input-section input,
 .input-section textarea {
   display: block;
@@ -252,9 +285,11 @@ footer.camber-footer div .heading {
   border-radius: 8px;
   width: 90%;
 }
+
 .input-section input:focus {
   outline: none;
 }
+
 .input-section input::placeholder {
   color: var(--white);
 }
@@ -272,10 +307,12 @@ footer.camber-footer div ul li a {
   text-decoration: none;
   color: white;
 }
+
 footer.camber-footer div ul li span {
   font-size: 16px;
   font-weight: 400;
 }
+
 footer.camber-footer div ul li span:hover {
   color: var(--red);
   border-bottom: 1px dashed var(--red);
@@ -293,12 +330,18 @@ footer.camber-footer div.hr-below div.copyright {
   text-align: start;
   /* font-size: 80%; */
   font-weight: 400;
-  padding: 0 !important;
+  padding: 0;
 }
+
+body footer.camber-footer div.hr-below div.copyright {
+  padding: 0;
+}
+
 footer.camber-footer .brand-mark {
   text-align: right;
   padding: 0;
 }
+
 footer.camber-footer small span {
   font-size: 14px;
   color: var(--red);
@@ -319,15 +362,18 @@ footer.camber-footer small a {
     width: 7rem;
     height: 5rem;
   }
+
   .navbar-brand img {
     width: 6rem;
     height: auto;
     margin: auto;
   }
+
   .nav-link {
     padding: 0;
     margin: 0;
   }
+
   .nav-link span {
     /* padding: 2px; */
     margin: 0;
@@ -335,11 +381,13 @@ footer.camber-footer small a {
     font-size: 0.8rem;
     height: 100%;
   }
+
   .footer-contact-us,
   .input-section {
     padding: 24px 8px;
     width: 90%;
   }
+
   .footer-contact-us {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -348,6 +396,7 @@ footer.camber-footer small a {
   footer.camber-footer div.footer-contact-us div p {
     margin-right: 0rem;
   }
+
   .footer-main {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -360,15 +409,18 @@ footer.camber-footer small a {
     height: 56px;
     padding: 0;
   }
+
   .navbar-brand {
     padding: 8px;
     width: 136px;
     height: 80px;
   }
+
   .navbar-brand img {
     width: 104px;
     height: auto;
   }
+
   .navbar-toggler {
     z-index: 9;
     margin: 4px 2px 4px 85%;
@@ -379,9 +431,11 @@ footer.camber-footer small a {
     border: 1px solid transparent;
     border-radius: 0.25rem;
   }
+
   ul.navbar-nav {
     background-color: black;
   }
+
   .navbar .nav-link {
     /* padding: 4px; */
     font-size: 0.9rem;
@@ -408,9 +462,11 @@ footer.camber-footer small a {
     text-align: justify;
     font-size: 13px;
   }
+
   footer.camber-footer div h6 {
     font-size: 13px;
   }
+
   .input-section,
   .footer-contact-us {
     padding: 24px 4px;
@@ -418,11 +474,17 @@ footer.camber-footer small a {
   }
 
   .input-section input {
-    width: 94% !important;
+    width: 94%;
   }
+
+  body .input-section input {
+    width: 94%;
+  }
+
   footer.camber-footer div div.footer-contact-us div p {
     margin-right: 0rem;
   }
+
   footer.camber-footer div.hr-below {
     margin: auto 24px;
   }
@@ -431,8 +493,13 @@ footer.camber-footer small a {
     text-align: center;
     margin-bottom: 0.3rem;
   }
+
   footer.camber-footer .brand-mark {
-    text-align: center !important;
+    text-align: center;
+  }
+
+  body footer.camber-footer .brand-mark {
+    text-align: center;
   }
 
   .footer-main {
@@ -448,4 +515,3 @@ footer.camber-footer small a {
   --red: #e9081e;
   --white: #ffffff;
 }
-
