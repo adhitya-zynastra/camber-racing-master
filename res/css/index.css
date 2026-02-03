@@ -1182,3 +1182,44 @@ body .sponsor-para {
     z-index: 100000 !important;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* FORCE MOBILE MENU INTO REAL OVERLAY */
+  .navbar-collapse.show {
+    position: fixed !important;
+    inset: 0 !important;
+
+    background: #ffffff !important;
+    z-index: 9999 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* MENU LINKS – RESET EVERYTHING */
+  .navbar-collapse.show .nav-link {
+    color: #000000 !important;
+    background: transparent !important;
+
+    font-size: 1.4rem;
+    margin: 12px 0;
+  }
+
+  /* KILL ALL BACKGROUND LEAKS */
+  .navbar-collapse.show * {
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  /* KEEP TOGGLER CLICKABLE */
+  .navbar-toggler {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 10000;
+  }
+}
