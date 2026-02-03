@@ -1111,3 +1111,74 @@ body .sponsor-para {
     display: none;
   }
 }
+
+/* ==========================================================================
+   FINAL MOBILE MENU FIXES (Appended to ensure override)
+   ========================================================================== */
+@media (max-width: 768px) {
+
+  /* Force Navbar Collapse to be a solid white overlay */
+  div.navbar-collapse {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #ffffff !important;
+    /* SOLID WHITE */
+    background-image: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    z-index: 99999 !important;
+
+    /* Ensure no padding/margins break the layout */
+    margin: 0 !important;
+    padding: 0 !important;
+
+    /* Centering content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ensure active/show states don't change the background */
+  div.navbar-collapse.show,
+  div.navbar-collapse.collapsing {
+    background-color: #ffffff !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Force Navbar Itself to be White */
+  nav.navbar {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Reset Nav Items to avoid inheriting anything weird */
+  .navbar-nav {
+    background: transparent !important;
+    width: 100% !important;
+  }
+
+  .nav-item {
+    background: transparent !important;
+  }
+
+  /* Ensure text is black and readable */
+  .nav-link,
+  .nav-link span,
+  .dropdown-item {
+    color: #000000 !important;
+    text-shadow: none !important;
+  }
+
+  /* Ensure Toggler stays on top */
+  .navbar-toggler {
+    z-index: 100000 !important;
+  }
+}
