@@ -903,41 +903,148 @@ body .sponsor-para {
    MOBILE FIXES (Max-Width: 768px) - Strictly for Mobile Only
    ========================================================================== */
 
-  /* --- 1) Navbar & Mobile Menu --- */
+  /* --- 1) Navbar & Mobile Menu (Strict Requirements) --- */
+
+  /* Navbar Container: CONSISTENT WHITE BACKGROUND */
   .navbar {
-    background-color: #000000 !important;
-    /* Force solid black background */
+    background-color: #ffffff !important;
+    height: 60px;
+    /* Normalize height */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Subtle separation */
     backdrop-filter: none !important;
-    /* Remove blur if it causes issues */
   }
 
+  /* Logos: Alignment normalization */
+  .navbar-brand {
+    padding: 5px !important;
+    height: 50px !important;
+    width: auto !important;
+    top: 5px !important;
+    /* Center vertically in 60px navbar */
+    background: transparent !important;
+    /* Ensure no white box */
+  }
+
+  .navbar-brand img {
+    height: 100% !important;
+    width: auto !important;
+  }
+
+  /* Sponsor Logo Adjustment */
+  .navbar-sponsor {
+    left: 100px !important;
+    /* Adjust position to be next to main logo */
+    top: 5px !important;
+    height: 50px !important;
+    clip-path: none !important;
+    /* Remove clip path usage */
+  }
+
+  /* Hamburger Toggle: BLACK icon on White bg */
   .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.5);
-    /* Visible border */
+    border-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 15px;
+    top: 10px;
   }
 
   .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* SVG stroke changed to BLACK */
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
+  /* Mobile Menu: FULLSCREEN OVERLAY */
   .navbar-collapse {
-    background-color: #000000;
-    /* Ensure menu background is black */
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    width: 100%;
-    z-index: 1050;
-    /* Ensure it stays on top */
-    max-height: 80vh;
-    overflow-y: auto;
-    border-top: 1px solid #222;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    /* Solid White Background */
+    z-index: 99999 !important;
+    /* Top-most layer */
+    display: flex;
+    /* Allow content to start below */
+    flex-direction: column;
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    visibility: hidden;
+    /* Hidden by default when collapsed */
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  /* Dim hero background when menu is open */
+  /* When Open */
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    /* Force flex */
+  }
+
+  /* Hide standard scroll */
   .navbar-collapse.show {
-    box-shadow: 0 100vh 0 100vh rgba(0, 0, 0, 0.7);
-    /* Overlay effect */
+    overflow-y: auto;
+  }
+
+  /* Style links specifically for the white overlay menu */
+  .navbar-nav {
+    background-color: transparent !important;
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .nav-item {
+    margin: 15px 0;
+  }
+
+  .nav-link span {
+    color: #000000 !important;
+    /* Black text */
+    font-size: 1.5rem;
+    /* Larger text */
+    font-weight: 700;
+  }
+
+  /* Hide Logos when Menu is Open? 
+     The Fullscreen white overlay (.navbar-collapse) sits at z-index 99999.
+     Logos (.navbar-brand) usually have lower z-index.
+     If brands bleed through, we need to force z-index lower.
+  */
+  .navbar-brand {
+    z-index: 1000 !important;
+  }
+
+  /* Also ensure the TOGGLER is visible inside the menu?
+     Usually user closes menu by clicking toggler again.
+     If Menu covers toggler, user is trapped.
+     We need Toggler to be ABOVE menu (Z > 99999) OR inside it.
+     But toggler is sibling of collapse.
+     So set Toggler Z-Index higher.
+  */
+  .navbar-toggler {
+    z-index: 100000 !important;
+    /* Higher than menu */
+  }
+
+  /* Dropdown Handling */
+  .dropdown-menu {
+    position: relative !important;
+    float: none !important;
+    background: transparent !important;
+    border: none;
+    text-align: center;
+    box-shadow: none !important;
+  }
+
+  .dropdown-item {
+    color: #444 !important;
+    font-size: 1.2rem;
   }
 
   /* --- 2) About Us Section --- */
@@ -996,13 +1103,11 @@ body .sponsor-para {
   /* --- 4) Our Sponsors Section --- */
   .sponsor-para {
     width: 95% !important;
-    /* Use more horizontal space */
     padding: 0 5px !important;
     text-align: center;
   }
 
   .sponsor-para br {
     display: none;
-    /* Let text wrap naturally */
   }
 }
