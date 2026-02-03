@@ -888,6 +888,7 @@ body .sponsor-para {
 
 @media (max-width: 768px) {
 
+  /* Existing rules */
   .section-title,
   .camber-heading,
   h2.social-media {
@@ -896,5 +897,112 @@ body .sponsor-para {
 
   .news-feed-container {
     padding: 1rem;
+  }
+
+  /* ==========================================================================
+   MOBILE FIXES (Max-Width: 768px) - Strictly for Mobile Only
+   ========================================================================== */
+
+  /* --- 1) Navbar & Mobile Menu --- */
+  .navbar {
+    background-color: #000000 !important;
+    /* Force solid black background */
+    backdrop-filter: none !important;
+    /* Remove blur if it causes issues */
+  }
+
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+    /* Visible border */
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-collapse {
+    background-color: #000000;
+    /* Ensure menu background is black */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+    /* Ensure it stays on top */
+    max-height: 80vh;
+    overflow-y: auto;
+    border-top: 1px solid #222;
+  }
+
+  /* Dim hero background when menu is open */
+  .navbar-collapse.show {
+    box-shadow: 0 100vh 0 100vh rgba(0, 0, 0, 0.7);
+    /* Overlay effect */
+  }
+
+  /* --- 2) About Us Section --- */
+  .about-us-container h2.camber-heading {
+    margin-bottom: 5px !important;
+    /* Reduce gap to divider */
+  }
+
+  .heading-content-divider {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .right-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .right-container img {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    /* Ensure it fits */
+    width: auto !important;
+    /* Allow natural width up to max */
+    height: auto !important;
+    max-height: 300px;
+    /* Cap height to keep people visible */
+    object-fit: contain !important;
+    /* Don't crop faces */
+  }
+
+  .left-container {
+    padding: 0 10px !important;
+  }
+
+  /* --- 3) News Feed Section --- */
+  .news-feed-content {
+    display: flex;
+    flex-direction: column-reverse;
+    /* Text first */
+  }
+
+  .news-feed-text {
+    margin-bottom: 20px;
+    padding-right: 0 !important;
+    /* Reset padding */
+  }
+
+  .news-feed-image {
+    margin-top: 10px;
+  }
+
+  /* --- 4) Our Sponsors Section --- */
+  .sponsor-para {
+    width: 95% !important;
+    /* Use more horizontal space */
+    padding: 0 5px !important;
+    text-align: center;
+  }
+
+  .sponsor-para br {
+    display: none;
+    /* Let text wrap naturally */
   }
 }
