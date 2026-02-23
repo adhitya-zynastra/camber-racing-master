@@ -41,7 +41,7 @@ const sponsors = [
   ["NightHawk", "https://www.nighthawklife.store/"],
   ["OnlyScrews", "https://onlyscrews.in/?utm_source=google&utm_medium=cpc&utm_campaign=search_campaign&utm_term=firstcampaign&gad_source=1&gad_campaignid=22451480113&gclid=Cj0KCQiAhtvMBhDBARIsAL26pjFW-K5CxcvX4I5GwNRy_bEUZXXq08rGSsPjkZE13CBGztd1WcauP9MaAlTdEALw_wcB"],
   ["Poptopia", "https://poptopia.in/?srsltid=AfmBOor9ZGGdI-owcod9Cs4x8PrCTqCXGPRuacGKLX1Qp3_T--5j0TZ8"],
-  ["Shield Lubricants", "https://www.shieldlubricants.com/"]
+  ["Shield Lubricants", "https://www.shieldlubricants.com/"],
   ["VTransys", "https://vtransys.in/"]
 ];
 
