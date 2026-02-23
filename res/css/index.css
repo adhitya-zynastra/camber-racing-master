@@ -533,14 +533,15 @@ body .news-feed-container .jumbotron {
 .camber-heading,
 .camber-title,
 h2.social-media {
-  color: #ffffff !important;
+  color: #ffffff ;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: air-mitalic !important;
+  font-family: air-mitalic ;
 }
 
 .news-feed-heading span,
 .section-title span,
+.camber-title,
 .camber-heading span,
 h2.social-media span {
   color: #d10000;

@@ -1,37 +1,9 @@
 //years to be displayed in the navbar selector
 const years = [
-  2025, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011,
+  2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011,
 ];
 
 //members from each year with position
-const _2025 = [
-  ['Himanshu Kumar', 'Captain/ Lead Engineer - Manufacturing'],
-  ['Aryan Nair', 'Vice Captain/ Lead Engineer - Composites/ Manufacturing Engineer'],
-  ['Shashank Reddy', 'Technical Director/ Lead Engineer - Powertrain/ Manufacturing Engineer'],
-  ['Rohith Ramesh', 'Project Manager/ Lead Engineer - Chasis/ Manufacturing Engineer'],
-  ['yajna Prasanth K S', 'Lead Engineer - Drivetrain/ Manufacturing Engineer'],
-  ['Vaikunth M S', 'Lead Engineer - Aerodynamics, Simulation/ Suspension Senior Engineer/ Public Relation'],
-  ['Vedeshwar R', 'Lead Engineer - Design/Chasis & Simulation Engineer/ Team Recruitment & Recruit Manager'],
-  ['Shivang Nayyar', 'Lead Engineer - Intake'],
-  ['Riju Saha', 'Lead Engineer - Media/ Finance'],
-  ['krishang Srivastava', 'Lead Engineer - Paddock/ Aerodynamics & Brakes Engineer'],
-  ['Arunava Mandal', 'Lead Engineer - Suspension/Steering, Wheel & Tyres Engineer'],
-  ['Jahnvi Singh', 'Lead Engineer - Tyres/ Streeing & Wheel Engineer'],
-  ['Kushal Poudel', 'Lead Engineer - Electrical'],
-  ['Devara Nagaraju Naidu', 'Lead Engineer - Brakes/ Composites Engineer'],
-  ['Nishanth Vydula', 'Lead Engineer - Steering/ Wheel, Tyres & Suspension Engineer'],
-  ['Shouryaman Manhas', 'Lead Engineer - Exhaust'],
-  ['Srishti Kumari', 'Lead - Corporate'],
-  ['Alan Griffin', 'Chassis & Simulation Engineer'],
-  ['Darsh Pitalia', 'Drivetrain Engineer'],
-  ['Eniyavan K', 'Chasis & Suspension Engineer'],
-  ['Francis Solomon', 'Powetrain & Electrical Engineer'],
-  ['Hamza S', 'Brakes Engineer/ Corporate'],
-  ['TM Sakthiprasad', 'Composities & Brakes Engineer'],
-  ['Varun Jalanmanchili', 'Aerodynamics Engineer'],
-  ['Yuvraj Jariwala', 'Team Design & Simulation Engineer'],
-  ['Jeryl Jeeva', 'Intake & Exhaust Engineer'],
-]
 const _2011 = [
   [`Pushkar Venkat Narayan`, `Team Captain`],
   [`Tarun Kumar Tripathy`, `Corporate Director`],
@@ -356,6 +328,60 @@ const _2022 = [
   ["Hariesh Sekar ", " Electrical And Electronics Lead"],
 ];
 
+const _2023 = [[]];
+
+const _2024 = [
+  ['Kaustabh Dubhey', 'Captain'],
+  ['Yashowardan Singh', 'Project Manager'],
+  ['Ayush Goyal', 'Lead Engineer - Documentation'],
+  ['Vaikunth M S', 'Lead Engineer - Vehicle Dynamics'],
+  ['Vedeshwar', 'Lead Engineer - Design'],
+  ['Yajna Prasanth', 'Lead Engineer - Drivetrain'],
+  ['Shanshank Reddy', 'Lead Engineer - Powertrain'],
+  ['Devara Nagaraju Naidu', 'Lead Engineer - Brakes'],
+  ['Shivang Nayyar', 'Lead Engineer - Intake'],
+  ['Aryan Sampath Nair', 'Lead Engineer - Composites'],
+  ['Himanshu Kumar', 'Lead Engineer - Manufacturing'],
+  ['Kushal Poudel', 'Lead Engineer - Electrical'],
+  ['Jahnvi Singh', 'Lead Engineer - Wheel Assembly'],
+  ['Francis Solomon', 'Electrical Engineer'],
+  ['Ivan Joe Johny', 'Media'],
+  ['Srishti Kumari', 'Corporate'],
+  ['Rohith Ramesh', 'Design Engineer'],
+  ['Karan Rajesh', 'Documentation Engineer'],
+  ['Arunava', 'Suspension'],
+  ['Riju', 'Media']
+];
+
+const _2025 = [
+  ['Himanshu Kumar', 'Captain/ Lead Engineer - Manufacturing'],
+  ['Aryan Nair', 'Vice Captain/ Lead Engineer - Composites/ Manufacturing Engineer'],
+  ['Shashank Reddy', 'Technical Director/ Lead Engineer - Powertrain/ Manufacturing Engineer'],
+  ['Rohith Ramesh', 'Project Manager/ Lead Engineer - Chasis/ Manufacturing Engineer'],
+  ['yajna Prasanth K S', 'Lead Engineer - Drivetrain/ Manufacturing Engineer'],
+  ['Vaikunth M S', 'Lead Engineer - Aerodynamics, Simulation/ Suspension Senior Engineer/ Public Relation'],
+  ['Vedeshwar R', 'Lead Engineer - Design/Chasis & Simulation Engineer/ Team Recruitment & Recruit Manager'],
+  ['Shivang Nayyar', 'Lead Engineer - Intake'],
+  ['Riju Saha', 'Lead Engineer - Media/ Finance'],
+  ['krishang Srivastava', 'Lead Engineer - Paddock/ Aerodynamics & Brakes Engineer'],
+  ['Arunava Mandal', 'Lead Engineer - Suspension/Steering, Wheel & Tyres Engineer'],
+  ['Jahnvi Singh', 'Lead Engineer - Tyres/ Streeing & Wheel Engineer'],
+  ['Kushal Poudel', 'Lead Engineer - Electrical'],
+  ['Devara Nagaraju Naidu', 'Lead Engineer - Brakes/ Composites Engineer'],
+  ['Nishanth Vydula', 'Lead Engineer - Steering/ Wheel, Tyres & Suspension Engineer'],
+  ['Shouryaman Manhas', 'Lead Engineer - Exhaust'],
+  ['Srishti Kumari', 'Lead - Corporate'],
+  ['Alan Griffin', 'Chassis & Simulation Engineer'],
+  ['Darsh Pitalia', 'Drivetrain Engineer'],
+  ['Eniyavan K', 'Chasis & Suspension Engineer'],
+  ['Francis Solomon', 'Powetrain & Electrical Engineer'],
+  ['Hamza S', 'Brakes Engineer/ Corporate'],
+  ['TM Sakthiprasad', 'Composities & Brakes Engineer'],
+  ['Varun Jalanmanchili', 'Aerodynamics Engineer'],
+  ['Yuvraj Jariwala', 'Team Design & Simulation Engineer'],
+  ['Jeryl Jeeva', 'Intake & Exhaust Engineer'],
+];
+
 //selecting navbar and div to display the current team
 const nav = document.querySelector(".nav");
 const currentTeamEle = document.querySelector(".current-team");
@@ -406,6 +432,8 @@ const allmembers = [
   _2020,
   _2021,
   _2022,
+  _2023,
+  _2024,
   _2025,
 ];
 
